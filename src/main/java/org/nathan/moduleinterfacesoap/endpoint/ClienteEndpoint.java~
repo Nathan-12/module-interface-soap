@@ -1,16 +1,14 @@
 package org.nathan.moduleinterfacesoap.endpoint;
 
-import com.baeldung.springsoap.gen.*;
-import com.example.springsoap.cli.GetAllClientesRequest;
-import com.example.springsoap.cli.GetAllClientesResponse;
-import com.example.springsoap.cli.GetClienteRequest;
-import com.example.springsoap.cli.GetClienteResponse;
+import com.example.springsoap.cli.*;
 import org.nathan.moduleinterfacesoap.service.ConvertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import java.util.List;
 
 @Endpoint
 public class ClienteEndpoint {
@@ -35,7 +33,7 @@ public class ClienteEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllClientesRequest")
     @ResponsePayload
-    public GetAllClientesResponse getAllClients(@RequestPayload GetAllClientesRequest getAllClientsRequest) {
-        return convertService.mountAllCliente(getAllClientsRequest);
+    public List<GetClienteResponse> getAllClients(@RequestPayload GetAllClientesRequest getAllClientesRequest) {
+        return convertService.mountAllCliente(getAllClientesRequest);
     }
 }

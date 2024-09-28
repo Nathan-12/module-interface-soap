@@ -31,7 +31,7 @@ public class ClienteEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllClientesRequest")
     @ResponsePayload
-    public GetAllClientesResponse getAllClients(@RequestPayload GetAllClientesRequest getAllClientsRequest) {
-        return convertService.mountAllCliente(getAllClientsRequest);
+    public GetAllClientesResponse getAllClients(@RequestPayload GetAllClientesRequest getAllClientesRequest) {
+        return convertService.mountAllCliente(getAllClientesRequest);
     }
 }

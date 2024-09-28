@@ -30,11 +30,11 @@ public class ConvertService {
             for (ClienteREST clienteREST : clienteRESTSList) {
                 clientesList.add(createObject(clienteREST));
             }
-            response.setCliente(clientesList);
+            response.setClientes(clientesList);
             return response;
         }
 
-        response.setCliente(clientesList);
+        response.setClientes(clientesList);
         return response;
     }
 
