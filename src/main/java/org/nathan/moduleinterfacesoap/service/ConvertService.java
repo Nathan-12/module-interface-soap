@@ -22,6 +22,7 @@ public class ConvertService {
         // Lista vazia com clientes SOAP
         List<Cliente> clientesList = new ArrayList<>();
         // Responsta esperada
+
         GetAllClientesResponse response = new GetAllClientesResponse();
 
         if (!clienteRESTSList.isEmpty()) {
