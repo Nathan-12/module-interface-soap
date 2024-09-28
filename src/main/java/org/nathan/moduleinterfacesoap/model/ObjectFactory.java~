@@ -1,0 +1,86 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.3.2 
+// Consulte <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.09.28 às 01:08:22 PM BRT 
+//
+
+
+package org.nathan.moduleinterfacesoap.model;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the org.nathan.moduleinterfacesoap.model package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _ClienteResponse_QNAME = new QName("http://example.com/soap", "ClienteResponse");
+    private final static QName _AllClientesResponse_QNAME = new QName("http://example.com/soap", "AllClientesResponse");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.nathan.moduleinterfacesoap.model
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link ClienteResponse }
+     * 
+     */
+    public ClienteResponse createClienteResponse() {
+        return new ClienteResponse();
+    }
+
+    /**
+     * Create an instance of {@link AllClientesResponse }
+     * 
+     */
+    public AllClientesResponse createAllClientesResponse() {
+        return new AllClientesResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://example.com/soap", name = "ClienteResponse")
+    public JAXBElement<Object> createClienteResponse(Object value) {
+        return new JAXBElement<Object>(_ClienteResponse_QNAME, Object.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://example.com/soap", name = "AllClientesResponse")
+    public JAXBElement<Object> createAllClientesResponse(Object value) {
+        return new JAXBElement<Object>(_AllClientesResponse_QNAME, Object.class, null, value);
+    }
+
+}

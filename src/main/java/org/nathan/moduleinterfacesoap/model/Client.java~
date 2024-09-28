@@ -1,0 +1,4 @@
+package org.nathan.moduleinterfacesoap.model;
+
+public class Client {
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/springsoap/nathan"
+           targetNamespace="http://www.example.com/springsoap/nathan" elementFormDefault="qualified">
+
+    <xs:element name="getClienteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClienteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" type="tns:cliente"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllClientesRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllClientesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clientes" type="tns:cliente" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cliente">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="endereco" type="xs:string"/>
+            <xs:element name="nascimento" type="xs:string"/>
+            <xs:element name="profissao" type="xs:string"/>
+            <xs:element name="sobrenome" type="xs:string"/>
+            <xs:element name="genero" type="xs:string"/>
+            <xs:element name="id" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

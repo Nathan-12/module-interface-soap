@@ -1,0 +1,25 @@
+package org.nathan.moduleinterfacesoap.model;
+
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import lombok.Data;
+
+@Data
+@XmlRootElement(name = "CreateClienteResponse")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CreateClienteResponse {
+
+    @XmlElement(required = true)
+    private String response;
+
+    // Getter e Setter
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+}
