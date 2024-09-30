@@ -30,12 +30,30 @@ public class ConvertService {
             for (ClienteREST clienteREST : clienteRESTSList) {
                 clientesList.add(createObject(clienteREST));
             }
-            response.setClientes(clientesList);
+            response.setCliente(clientesList);
             return response;
         }
 
-        response.setClientes(clientesList);
+        response.setCliente(clientesList);
         return response;
+    }
+
+    public List<Cliente> mountAllClienteList(GetAllClientesRequest getAllClientesRequest) {
+        System.out.println(getAllClientesRequest);
+        // Lista vinda da REST API
+        List<ClienteREST> clienteRESTSList = restClientService.getAllClients();
+        // Lista vazia com clientes SOAP
+        List<Cliente> clientesList = new ArrayList<>();
+        // Responsta esperada
+
+        if (!clienteRESTSList.isEmpty()) {
+            for (ClienteREST clienteREST : clienteRESTSList) {
+                clientesList.add(createObject(clienteREST));
+            }
+            return clientesList;
+        }
+
+        return clientesList;
     }
 
     public Cliente mountCliente(String id) {

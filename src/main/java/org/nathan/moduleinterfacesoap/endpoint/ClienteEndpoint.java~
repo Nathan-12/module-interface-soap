@@ -8,8 +8,6 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import java.util.List;
-
 @Endpoint
 public class ClienteEndpoint {
 
@@ -33,7 +31,7 @@ public class ClienteEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllClientesRequest")
     @ResponsePayload
-    public List<GetClienteResponse> getAllClients(@RequestPayload GetAllClientesRequest getAllClientesRequest) {
+    public GetAllClientesResponse getAllClients(@RequestPayload GetAllClientesRequest getAllClientesRequest) {
         return convertService.mountAllCliente(getAllClientesRequest);
     }
 }

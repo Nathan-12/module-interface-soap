@@ -25,11 +25,13 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="getAllClientesResponse">
+    <xs:element name="getAllClientesResponse">
+    <xs:complexType>
         <xs:sequence>
             <xs:element name="cliente" type="tns:cliente" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
         </xs:sequence>
     </xs:complexType>
+    </xs:element>
 
     <xs:complexType name="cliente">
         <xs:sequence>
